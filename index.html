@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Translator App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h2 class="title">Translator App</h2>
+            </div>
+            <div class="record-controls">
+                <button id="startRecord" class="record-btn"><i class="fas fa-microphone"></i> Start Recording</button>
+                <button id="stopRecord" class="record-btn hidden"><i class="fas fa-stop"></i> Stop Recording</button>
+                <audio id="audioPlayback" controls class="hidden"></audio>
+            </div><br>
+            <div class="inputs">
+                <div class="first_input" id="input">
+                    <select id="languagesFrom">
+                        <option id="en-US" value="en-US">English</option>
+                        <option id="ru-RU" value="ru-RU">Russian</option>
+                        <option id="tr-TR" value="tr-TR">Turkish</option>
+                        <option id="ar-AR" value="ar-AR">Arabic</option>
+                        <option id="tg-TG" value="tg-TG">Tajik</option>
+                        <option id="uz-UZ" value="uz-UZ">Uzbek</option>
+                    </select>
+                    <i class="fas fa-close hidden" id="close"></i>
+                    <textarea id="translateFromTXTArea" autofocus cols="30" rows="10" placeholder="Enter Text"></textarea>
+                </div>
+                <i class="fas fa-exchange-alt" id="icon"></i>
+                <div class="second_input" id="input">
+                    <select id="languagesTo">
+                        <option id="tr-TR" value="tr-TR">Turkish</option>
+                        <option id="en-US" value="en-US">English</option>
+                        <option id="ru-RU" value="ru-RU">Russian</option>
+                        <option id="ar-AR" value="ar-AR">Arabic</option>
+                        <option id="tg-TG" value="tg-TG">Tajik</option>
+                        <option id="uz-UZ" value="uz-UZ">Uzbek</option>
+                    </select>
+                    <textarea id="translateToTXTArea" cols="30" rows="10" placeholder="Translation" disabled></textarea>
+                </div>
+                <p></p>
+            </div>
+            <button class="btn">Translate Text</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
